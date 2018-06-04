@@ -166,7 +166,7 @@ public class FormModels {
         {
             FormQuestionModel question = new FormQuestionModel();
             question.questionTextInEnglish = "Did the candidate use loud speaker during the political gathering?";
-            question.questionTextInUrdu = "کیا امیدوار جلسے یا ریلی میں لاؤڈ سپیکر کا  استعمال کیا؟";
+            question.questionTextInUrdu = "کیا جلسے یا ریلی میں لاؤڈ سپیکر کا  استعمال کیاگیا؟";
             question.itemNumber = 7;
             question.questionType = kQuestionTypeYESNO;
             FormOptionModel option = new FormOptionModel();
@@ -662,14 +662,22 @@ public class FormModels {
             question.questionTextInEnglish = "How many floors are there at the polling station building?";
             question.questionTextInUrdu = "پولنگ اسٹیشن کی عمارت کتنی منزلہ ہے؟";
             question.questionType = kQuestionTypeYESNO;
+
             FormOptionModel option = new FormOptionModel();
-            option.optionTextInEnglish = "Yes";
-            option.optionTextInUrdu = "ہاں";
+            option.optionTextInEnglish = "Two Story";
+            option.optionTextInUrdu = "دو منزلہ";
+
             FormOptionModel option1 = new FormOptionModel();
-            option1.optionTextInEnglish = "No";
-            option1.optionTextInUrdu = "نہیں";
+            option1.optionTextInEnglish = "Three Story";
+            option1.optionTextInUrdu = "تین منزلہ";
+
+            FormOptionModel option2 = new FormOptionModel();
+            option2.optionTextInEnglish = "Four Story";
+            option2.optionTextInUrdu = "چار منزلہ";
+
             question.optionsArray.add(option);
             question.optionsArray .add(option1);
+            question.optionsArray .add(option2);
             mutableArrayForForm15.add(question);
         }
 
@@ -716,14 +724,14 @@ public class FormModels {
         {
 
             FormQuestionModel question1 = new FormQuestionModel();
-            question1.questionTextInEnglish = "Is Portrait advertisement displayed or not";
+            question1.questionTextInEnglish = "Are Potraits displayed or not?";
             question1.questionTextInUrdu = " پورٹریٹ لگے ہوئے ہیں یا نہیں";
             question1.questionType = kQuestionTypeYESNO;
             FormOptionModel option1 = new FormOptionModel();
             option1.optionTextInEnglish = "Yes";
             {//sub branch 1
                 FormQuestionModel question1_1 = new FormQuestionModel();
-                question1_1.questionTextInEnglish = "Is name of the publisher written or not?";
+                question1_1.questionTextInEnglish = "Political Party/Candidate 1: Is name of the publisher written or not?";
                 question1_1.questionTextInUrdu = "پبلشر کا نام درج ہے یا نہیں";
                 question1_1.questionType = kQuestionTypeYESNO;
                 FormOptionModel option1_1 = new FormOptionModel();
@@ -738,22 +746,22 @@ public class FormModels {
             }
             {//sub branch 2
                 FormQuestionModel question1_2 = new FormQuestionModel();
-                question1_2.questionTextInEnglish = "Size of Ad";
+                question1_2.questionTextInEnglish = "Political Party/Candidate 1: Size of the potrait (height x width)";
                 question1_2.questionTextInUrdu = "اشتہار کا سائز";
                 question1_2.questionType = kQuestionTypeOptions;
                 FormOptionModel option1_2 = new FormOptionModel();
-                option1_2.optionTextInEnglish = "3x5 Feets";
-                option1_2.optionTextInUrdu = "3x5فٹ";
+                option1_2.optionTextInEnglish = "5x3 Feets";
+                option1_2.optionTextInUrdu = "5x3 فٹ";
                 FormOptionModel option2_2 = new FormOptionModel();
-                option2_2.optionTextInEnglish = "Larger than 3x5 Feets";
-                option2_2.optionTextInUrdu = "3x5 فٹ سے بڑا";
+                option2_2.optionTextInEnglish = "Larger than 5x3 Feets";
+                option2_2.optionTextInUrdu = "5x3 فٹ سے بڑا";
                 question1_2.optionsArray.add(option1_2);
                 question1_2.optionsArray.add(option2_2);
                 option1.mutableArrayForDependantQuestions .add(question1_2);
             }
             {//sub branch 3
                 FormQuestionModel question1_3 = new FormQuestionModel();
-                question1_3.questionTextInEnglish = "Ads belongs to";
+                question1_3.questionTextInEnglish = "Political Party/Candidate 1: Name of Political Party";
                 question1_3.questionTextInUrdu = "اشتہار کس کے لگے ہیں"; //list of all candidates of political party
                 question1_3.questionType = kQuestionTypeSpinnerPicker;
                 FormOptionModel option1_3 = new FormOptionModel();
@@ -769,7 +777,7 @@ public class FormModels {
             }
             {//sub branch 4 will appear after selecting a party
                 FormQuestionModel question1_4 = new FormQuestionModel();
-                question1_4.questionTextInEnglish = "Candidate Name";
+                question1_4.questionTextInEnglish = "Political Party/Candidate 1: Name of Candidate";
                 question1_4.questionTextInUrdu = "امیدوار کا نام";
                 question1_4.questionType = kQuestionTypeSingleEntry;
                 FormOptionModel option1_4 = new FormOptionModel();
@@ -792,14 +800,14 @@ public class FormModels {
         {
 
             FormQuestionModel question1 = new FormQuestionModel();
-            question1.questionTextInEnglish = "Is Poster advertisement displayed or not";
+            question1.questionTextInEnglish = "Are Posters displayed or not";
             question1.questionTextInUrdu = "پوسٹر لگے ہوئے ہیں یا نہیں";
             question1.questionType = kQuestionTypeYESNO;
             FormOptionModel option1 = new FormOptionModel();
             option1.optionTextInEnglish = "Yes";
             {//sub branch 1
                 FormQuestionModel question1_1 = new FormQuestionModel();
-                question1_1.questionTextInEnglish = "Is name of the publisher written or not?";
+                question1_1.questionTextInEnglish = "Political Party/Candidate 1: Is name of the publisher written or not?";
                 question1_1.questionTextInUrdu = "پبلشر کا نام درج ہے یا نہیں";
                 question1_1.questionType = kQuestionTypeYESNO;
                 FormOptionModel option1_1 = new FormOptionModel();
@@ -814,12 +822,12 @@ public class FormModels {
             }
             {//sub branch 2
                 FormQuestionModel question1_2 = new FormQuestionModel();
-                question1_2.questionTextInEnglish = "Size of Ad";
+                question1_2.questionTextInEnglish = "Political Party/Candidate 1: Size of the posters (height x width)";
                 question1_2.questionTextInUrdu = "اشتہار کا سائز";
                 question1_2.questionType = kQuestionTypeOptions;
                 FormOptionModel option1_2 = new FormOptionModel();
                 option1_2.optionTextInEnglish = "2x3 Feets";
-                option1_2.optionTextInUrdu = "2x3فٹ";
+                option1_2.optionTextInUrdu = "2x3 فٹ";
                 FormOptionModel option2_2 = new FormOptionModel();
                 option2_2.optionTextInEnglish = "Larger than 2x3 Feets";
                 option2_2.optionTextInUrdu = "2x3 فٹ سے بڑا";
@@ -829,7 +837,7 @@ public class FormModels {
             }
             {//sub branch 3
                 FormQuestionModel question1_3 = new FormQuestionModel();
-                question1_3.questionTextInEnglish = "Ads belongs to";
+                question1_3.questionTextInEnglish = "Political Party/Candidate 1: Name of Political Party";
                 question1_3.questionTextInUrdu = "اشتہار کس کے لگے ہیں"; //list of all candidates of political party
                 question1_3.questionType = kQuestionTypeSpinnerPicker;
                 FormOptionModel option1_3 = new FormOptionModel();
@@ -845,7 +853,7 @@ public class FormModels {
             }
             {//sub branch 4 will appear after selecting a party
                 FormQuestionModel question1_4 = new FormQuestionModel();
-                question1_4.questionTextInEnglish = "Candidate Name";
+                question1_4.questionTextInEnglish = "Political Party/Candidate 1: Name of Candidate";
                 question1_4.questionTextInUrdu = "امیدوار کا نام";
                 question1_4.questionType = kQuestionTypeSingleEntry;
                 FormOptionModel option1_4 = new FormOptionModel();
@@ -869,14 +877,14 @@ public class FormModels {
         {
 
             FormQuestionModel question1 = new FormQuestionModel();
-            question1.questionTextInEnglish = "Is Banner advertisement displayed or not";
+            question1.questionTextInEnglish = "Are Banners displayed or not";
             question1.questionTextInUrdu = "بینر لگے ہوئے ہیں یا نہیں";
             question1.questionType = kQuestionTypeYESNO;
             FormOptionModel option1 = new FormOptionModel();
             option1.optionTextInEnglish = "Yes";
             {//sub branch 1
                 FormQuestionModel question1_1 = new FormQuestionModel();
-                question1_1.questionTextInEnglish = "Is name of the publisher written or not?";
+                question1_1.questionTextInEnglish = "Political Party/Candidate 1: Is name of the publisher written or not?";
                 question1_1.questionTextInUrdu = "پبلشر کا نام درج ہے یا نہیں";
                 question1_1.questionType = kQuestionTypeYESNO;
                 FormOptionModel option1_1 = new FormOptionModel();
@@ -891,7 +899,7 @@ public class FormModels {
             }
             {//sub branch 2
                 FormQuestionModel question1_2 = new FormQuestionModel();
-                question1_2.questionTextInEnglish = "Size of Ad";
+                question1_2.questionTextInEnglish = "Political Party/Candidate 1: Size of the banners (height x width)";
                 question1_2.questionTextInUrdu = "اشتہار کا سائز";
                 question1_2.questionType = kQuestionTypeOptions;
                 FormOptionModel option1_2 = new FormOptionModel();
@@ -906,7 +914,7 @@ public class FormModels {
             }
             {//sub branch 3
                 FormQuestionModel question1_3 = new FormQuestionModel();
-                question1_3.questionTextInEnglish = "Ads belongs to";
+                question1_3.questionTextInEnglish = "Political Party/Candidate 1: Name of Political Party";
                 question1_3.questionTextInUrdu = "اشتہار کس کے لگے ہیں"; //list of all candidates of political party
                 question1_3.questionType = kQuestionTypeSpinnerPicker;
                 FormOptionModel option1_3 = new FormOptionModel();
@@ -943,7 +951,7 @@ public class FormModels {
             }
             {//sub branch 4 will appear after selecting a party
                 FormQuestionModel question1_4 = new FormQuestionModel();
-                question1_4.questionTextInEnglish = "Candidate Name";
+                question1_4.questionTextInEnglish = "Political Party/Candidate 1: Name of Candidate";
                 question1_4.questionTextInUrdu = "امیدوار کا نام";
                 question1_4.questionType = kQuestionTypeSingleEntry;
                 FormOptionModel option1_4 = new FormOptionModel();
@@ -966,14 +974,14 @@ public class FormModels {
         {
 
             FormQuestionModel question1 = new FormQuestionModel();
-            question1.questionTextInEnglish = "Is Pamphlet advertisement displayed or not";
+            question1.questionTextInEnglish = "Are Pamphlet displayed or not";
             question1.questionTextInUrdu = "پمفلٹ لگے ہوئے ہیں یا نہیں";
             question1.questionType = kQuestionTypeYESNO;
             FormOptionModel option1 = new FormOptionModel();
             option1.optionTextInEnglish = "Yes";
             {//sub branch 1
                 FormQuestionModel question1_1 = new FormQuestionModel();
-                question1_1.questionTextInEnglish = "Is name of the publisher written or not?";
+                question1_1.questionTextInEnglish = "Political Party/Candidate 1: Is name of the publisher written or not?";
                 question1_1.questionTextInUrdu = "پبلشر کا نام درج ہے یا نہیں";
                 question1_1.questionType = kQuestionTypeYESNO;
                 FormOptionModel option1_1 = new FormOptionModel();
@@ -988,7 +996,7 @@ public class FormModels {
             }
             {//sub branch 2
                 FormQuestionModel question1_2 = new FormQuestionModel();
-                question1_2.questionTextInEnglish = "Size of Ad";
+                question1_2.questionTextInEnglish = "Political Party/Candidate 1: Size of the Pamphlet (height x width)";
                 question1_2.questionTextInUrdu = "اشتہار کا سائز";
                 question1_2.questionType = kQuestionTypeOptions;
                 FormOptionModel option1_2 = new FormOptionModel();
@@ -1003,7 +1011,7 @@ public class FormModels {
             }
             {//sub branch 3
                 FormQuestionModel question1_3 = new FormQuestionModel();
-                question1_3.questionTextInEnglish = "Ads belongs to";
+                question1_3.questionTextInEnglish = "Political Party/Candidate 1: Name of Political Party";
                 question1_3.questionTextInUrdu = "اشتہار کس کے لگے ہیں"; //list of all candidates of political party
                 question1_3.questionType = kQuestionTypeSpinnerPicker;
                 FormOptionModel option1_3 = new FormOptionModel();
@@ -1019,7 +1027,7 @@ public class FormModels {
             }
             {//sub branch 4 will appear after selecting a party
                 FormQuestionModel question1_4 = new FormQuestionModel();
-                question1_4.questionTextInEnglish = "Candidate Name";
+                question1_4.questionTextInEnglish = "Political Party/Candidate 1: Name of Candidate";
                 question1_4.questionTextInUrdu = "امیدوار کا نام";
                 question1_4.questionType = kQuestionTypeSingleEntry;
                 FormOptionModel option1_4 = new FormOptionModel();
@@ -1043,7 +1051,7 @@ public class FormModels {
         {
 
             FormQuestionModel question1 = new FormQuestionModel();
-            question1.questionTextInEnglish = "Is Wall Chalking advertisement displayed or not";
+            question1.questionTextInEnglish = "Are Wall Chalking displayed or not";
             question1.questionTextInUrdu = "وال چاکنگ لگے ہوئے ہیں یا نہیں";
             question1.questionType = kQuestionTypeYESNO;
             FormOptionModel option1 = new FormOptionModel();
@@ -1065,7 +1073,7 @@ public class FormModels {
             }
             {//sub branch 2
                 FormQuestionModel question1_2 = new FormQuestionModel();
-                question1_2.questionTextInEnglish = "Size of Ad(In feet)";
+                question1_2.questionTextInEnglish = "Political Party/Candidate 1: Size of the Wall Chalking (height x width)";
                 question1_2.questionTextInUrdu = "اشتہار کا سائز (فٹ)";
                 question1_2.questionType = kQuestionTypeNumeric;
                 FormOptionModel option1_2 = new FormOptionModel();
@@ -1075,7 +1083,7 @@ public class FormModels {
             }
             {//sub branch 3
                 FormQuestionModel question1_3 = new FormQuestionModel();
-                question1_3.questionTextInEnglish = "Ads belongs to";
+                question1_3.questionTextInEnglish = "Political Party/Candidate 1: Name of Political Party";
                 question1_3.questionTextInUrdu = "اشتہار کس کے لگے ہیں"; //list of all candidates of political party
                 question1_3.questionType = kQuestionTypeSpinnerPicker;
                 FormOptionModel option1_3 = new FormOptionModel();
@@ -1091,7 +1099,7 @@ public class FormModels {
             }
             {//sub branch 4 will appear after selecting a party
                 FormQuestionModel question1_4 = new FormQuestionModel();
-                question1_4.questionTextInEnglish = "Candidate Name";
+                question1_4.questionTextInEnglish = "Political Party/Candidate 1: Name of Candidate";
                 question1_4.questionTextInUrdu = "امیدوار کا نام";
                 question1_4.questionType = kQuestionTypeSingleEntry;
                 FormOptionModel option1_4 = new FormOptionModel();
@@ -1114,7 +1122,7 @@ public class FormModels {
         {
 
             FormQuestionModel question1 = new FormQuestionModel();
-            question1.questionTextInEnglish = "Is Panaflex advertisement displayed or not";
+            question1.questionTextInEnglish = "Are Panaflex displayed or not";
             question1.questionTextInUrdu = "پینافلیکس لگے ہوئے ہیں یا نہیں";
             question1.questionType = kQuestionTypeYESNO;
             FormOptionModel option1 = new FormOptionModel();
@@ -1136,7 +1144,7 @@ public class FormModels {
             }
             {//sub branch 2
                 FormQuestionModel question1_2 = new FormQuestionModel();
-                question1_2.questionTextInEnglish = "Size of Ad(In feet)";
+                question1_2.questionTextInEnglish = "Political Party/Candidate 1: Size of the Panaflex (height x width)";
                 question1_2.questionTextInUrdu = "اشتہار کا سائز (فٹ)";
                 question1_2.questionType = kQuestionTypeNumeric;
                 FormOptionModel option1_2 = new FormOptionModel();
@@ -1146,7 +1154,7 @@ public class FormModels {
             }
             {//sub branch 3
                 FormQuestionModel question1_3 = new FormQuestionModel();
-                question1_3.questionTextInEnglish = "Ads belongs to";
+                question1_3.questionTextInEnglish = "Political Party/Candidate 1: Name of Political Party";
                 question1_3.questionTextInUrdu = "اشتہار کس کے لگے ہیں"; //list of all candidates of political party
                 question1_3.questionType = kQuestionTypeSpinnerPicker;
                 FormOptionModel option1_3 = new FormOptionModel();
@@ -1162,7 +1170,7 @@ public class FormModels {
             }
             {//sub branch 4 will appear after selecting a party
                 FormQuestionModel question1_4 = new FormQuestionModel();
-                question1_4.questionTextInEnglish = "Candidate Name";
+                question1_4.questionTextInEnglish = "Political Party/Candidate 1: Name of Candidate";
                 question1_4.questionTextInUrdu = "امیدوار کا نام";
                 question1_4.questionType = kQuestionTypeSingleEntry;
                 FormOptionModel option1_4 = new FormOptionModel();
@@ -1186,7 +1194,7 @@ public class FormModels {
         {
 
             FormQuestionModel question1 = new FormQuestionModel();
-            question1.questionTextInEnglish = "Is Billboard advertisement displayed or not";
+            question1.questionTextInEnglish = "Are Billboard displayed or not";
             question1.questionTextInUrdu = "بل بورڈ لگے ہوئے ہیں یا نہیں";
             question1.questionType = kQuestionTypeYESNO;
             FormOptionModel option1 = new FormOptionModel();
@@ -1208,7 +1216,7 @@ public class FormModels {
             }
             {//sub branch 2
                 FormQuestionModel question1_2 = new FormQuestionModel();
-                question1_2.questionTextInEnglish = "Size of Ad(In feet)";
+                question1_2.questionTextInEnglish = "Political Party/Candidate 1: Size of the Billboard (height x width)";
                 question1_2.questionTextInUrdu = "اشتہار کا سائز (فٹ)";
                 question1_2.questionType = kQuestionTypeNumeric;
                 FormOptionModel option1_2 = new FormOptionModel();
@@ -1218,7 +1226,7 @@ public class FormModels {
             }
             {//sub branch 3
                 FormQuestionModel question1_3 = new FormQuestionModel();
-                question1_3.questionTextInEnglish = "Ads belongs to";
+                question1_3.questionTextInEnglish = "Political Party/Candidate 1: Name of Political Party";
                 question1_3.questionTextInUrdu = "اشتہار کس کے لگے ہیں"; //list of all candidates of political party
                 question1_3.questionType = kQuestionTypeSpinnerPicker;
                 FormOptionModel option1_3 = new FormOptionModel();
@@ -1234,7 +1242,7 @@ public class FormModels {
             }
             {//sub branch 4 will appear after selecting a party
                 FormQuestionModel question1_4 = new FormQuestionModel();
-                question1_4.questionTextInEnglish = "Candidate Name";
+                question1_4.questionTextInEnglish = "Political Party/Candidate 1: Name of Candidate";
                 question1_4.questionTextInUrdu = "امیدوار کا نام";
                 question1_4.questionType = kQuestionTypeSingleEntry;
                 FormOptionModel option1_4 = new FormOptionModel();
